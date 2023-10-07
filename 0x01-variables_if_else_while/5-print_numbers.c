@@ -1,22 +1,22 @@
 #include <stdio.h>
 
 /**
- * main - program that prints the numbers from 0 to 9
+ * main - Entry point
  *
- * Return: Always 0.
+ * Description: Prints the numbers from 0 to 9
+ * Return: Always 0
  */
-
 int main(void)
 {
-    char digit;
+	char digit;
 
-    for (digit = '0'; digit <= '9'; digit++)
-    {
-        putchar(digit);
-    }
+	for (digit = '0'; digit <= '9'; digit++)
+	{
+		putchar(digit);
+	}
 
-    putchar('\n');
+	putchar('\n');
 
-    return (0);
+	return (0);
 }
 
