@@ -18,7 +18,7 @@ int main(void)
         sum_high = fib1_high + fib2_high;
         sum_low = fib1_low + fib2_low;
 
-        if (sum_low >= 10000000000)  // Carry over if needed
+        if (sum_low >= 10000000000)  /* Carry over if needed */
         {
             sum_low -= 10000000000;
             sum_high++;
