@@ -5,6 +5,7 @@
 *void protoypes (void)
 *int protoypes (int)
 */
+int _putchar(int c);
 int _putchar(char c);
 int _isupper(int c);
 int _isdigit(int c);
