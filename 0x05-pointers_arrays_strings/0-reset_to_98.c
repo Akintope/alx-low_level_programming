@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-  * reset_to_98 is the name of the function
+  * reset_to_98 - It updates the value to 98
   * @n: is the function parameter
   */
 
