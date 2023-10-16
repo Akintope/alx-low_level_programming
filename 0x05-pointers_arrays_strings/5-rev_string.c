@@ -16,7 +16,7 @@ for (i = 0; i < total / 2; i++)
 {
 char j;
 j = s[i];
-s[i] = s[count - 1 - i];
-s[count - 1 - i] = j;
+s[i] = s[total - 1 - i];
+s[total - 1 - i] = j;
 }
 }
