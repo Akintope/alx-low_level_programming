@@ -1,10 +1,11 @@
 #include "main.h"
  /**
-   * _strcpy - Is the name of the function
-   * @dest: the first parameter
-   * @src: the second parameter
-   * Return: 0
-   */
+  * _strcpy - Entry Point
+  * Description: A function that copies a string from source to destination 
+  * @src: …
+  * @dest …
+  * Return: Function returns dest pointer 
+  */
 
 char *_strcpy(char *dest, char *src)
 {
