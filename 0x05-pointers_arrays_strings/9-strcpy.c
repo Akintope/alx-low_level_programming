@@ -1,20 +1,18 @@
 #include "main.h"
- /**
-  * _strcpy - Entry Point
-  * Description: A function that copies a string from source to destination 
-  * @src: …
-  * @dest …
-  * Return: Function returns dest pointer 
-  */
+#include <stdio.h>
 
-char *_strcpy(char *dest, char *src)
+/**
+ * main - check code
+ *
+ * Return: 0
+ */
+int main(void)
 {
-int i;
+	char s1[98];
+	char *ptr;
 
-for (i = 0; src[i] != '\0'; i++)
-{
-dest[i] = src[i];
-}
-dest[i] = '\0';
-return (dest);
+	ptr = _strcpy(s1, "First, solve the problem. Then, write the code\n");
+	printf("%s", s1);
+	printf("%s", ptr);
+	return (0);
 }
