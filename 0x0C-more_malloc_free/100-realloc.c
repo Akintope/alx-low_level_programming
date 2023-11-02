@@ -41,7 +41,16 @@ char *p;
 int k;
 
 p = malloc(sizeof(char) * 10);
-p = _realloc(p, sizeof(char) * 10, sizeof(char) * 98);
+if (p ==NULL)
+{
+return (1);
+}
+p = realloc(p, sizeof(char) * 98);
+if (p == NULL)
+{
+free(p);
+return (1);
+}
 k = 0;
 while (k < 98)
 {
