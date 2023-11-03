@@ -2,61 +2,38 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 /**
- * simple_print_buffer - it prints buffer
- * @buffer: is the address of memory
- * @size: is the size of the memory
- * Return: 0
+ * *_realloc - it reallocates memory size function
+ * @ptr: is the pointer to address of old memory location
+ * @old_size: is old memory size
+ * @new_size: is new memory size
+ * Return: pointer to array
  */
-void simple_print_buffer(char *buffer, unsigned int size)
-{
-unsigned int k;
 
-k = 0;
-while (k < size)
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-if (k % 10)
-{
-printf(" ");
-}
-if (!(k % 10) && k)
-{
-printf("\n");
-}
-printf("0x%02x", buffer[k]);
-k++;
-}
-printf("\n");
-}
+char *s;
 
-/**
- * main - check the code
- *
- * Return: 0
- */
-int main(void)
+if (new_size > old_size)
 {
-char *p;
-int k;
-
-p = malloc(sizeof(char) * 10);
-if (p ==NULL)
-{
-return (1);
+s = malloc(new_size);
+free(ptr);
+return (s);
 }
-p = realloc(p, sizeof(char) * 98);
-if (p == NULL)
+if (new_size == old_size)
 {
-free(p);
-return (1);
+return (ptr);
 }
-k = 0;
-while (k < 98)
+if (ptr == NULL)
 {
-p[k++] = 98;
+s = malloc(new_size);
+free(ptr);
+return (s);
 }
-simple_print_buffer(p, 98);
-free(p);
-return (0);
+if (new_size == 0 && ptr != NULL)
+{
+free(ptr);
+return (NULL);
+}
+return (ptr);
 }
