@@ -37,7 +37,7 @@ t->next = m;
 return (m);
 }
 else
-t = t->m;
+t = t->next;
 }
 
 return (NULL);
