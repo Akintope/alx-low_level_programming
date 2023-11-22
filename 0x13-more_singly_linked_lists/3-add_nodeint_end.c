@@ -6,13 +6,13 @@
 * @n: It is the data to insert in the new element
  * Return: It returns a pointer to the new node
  */
-listint_t *add_nodeint_end(listint_t **h, const int n)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 listint_t *m;
 listint_t *t = *head;
 
-new = malloc(sizeof(listint_t));
-if (!new)
+m = malloc(sizeof(listint_t));
+if (!m)
 return (NULL);
 
 m->n = n;
@@ -24,7 +24,7 @@ if (*head == NULL)
 return (m);
 }
 
-while (t->m)
+while (t->next)
 t = t->next;
 
 t->next = m;
